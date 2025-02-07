@@ -41,7 +41,7 @@ func main() {
 		_, _ = fmt.Fprintf(os.Stderr, "failed to marshal: %v", err)
 		os.Exit(1)
 	}
-	err = os.WriteFile(filename, data, 0644)
+	err = os.WriteFile(filename, data, 0o644)
 	if err != nil {
 		_, _ = fmt.Fprintf(os.Stderr, "failed to write file %q: %v", filename, err)
 		os.Exit(1)
